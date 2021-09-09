@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Namespaces>
+  <Namespace Name="Cricket_Simulator.Console">
+   <Messages>
+    <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="95" Level="Error">Remove the underscores from namespace name 'Cricket_Simulator.Console'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Cricket_Simulator.Console.Logic">
+   <Messages>
+    <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="95" Level="Error">Remove the underscores from namespace name 'Cricket_Simulator.Console.Logic'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.Console.exe">
+   <Modules>
+    <Module Name="cricket simulator.console.exe">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Cricket Simulator.Console.exe' with a strong name key.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'Cricket Simulator.Console.exe' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Cricket_Simulator.Console">
+       <Types>
+        <Type Name="ConsoleHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetUserChoiceIndex(System.String,System.String[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console" File="ConsoleHelper.cs" Line="54">Method 'ConsoleHelper.GetUserChoiceIndex(string, params string[])' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "\n, . ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console" File="ConsoleHelper.cs" Line="56">Method 'ConsoleHelper.GetUserChoiceIndex(string, params string[])' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "\n\nYour choice: ".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetUserNumber(System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console" File="ConsoleHelper.cs" Line="36">Method 'ConsoleHelper.GetUserNumber(int, int)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Selection not within expected range. Try again.\n".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ReadValue(System.Int32&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console" File="ConsoleHelper.cs" Line="71">Method 'ConsoleHelper.ReadValue(out int)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Invalid input. Try again.\n".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#USABLE_WIDTH" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="USABLE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'USABLE' in member name 'ConsoleHelper.USABLE_WIDTH' by changing it to 'Usable'.</Issue>
+            </Message>
+            <Message Id="WIDTH" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'WIDTH' in member name 'ConsoleHelper.USABLE_WIDTH' by changing it to 'Width'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'ConsoleHelper.USABLE_WIDTH'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Cricket_Simulator.Console.Logic">
+       <Types>
+        <Type Name="CheckPoint" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message Id="CheckPoint" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+           <Issue Name="TypeShouldBeDiscreteTerm" Certainty="80" Level="Error">The compound word 'CheckPoint' in type name 'CheckPoint' exists as a discrete term. If your usage is intended to be single word, case it as 'Checkpoint'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetCheckPoint()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="CheckPoint" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="CheckPoint.cs" Line="9">The compound word 'CheckPoint' in member name 'CheckPoint.GetCheckPoint()' exists as a discrete term. If your usage is intended to be single word, case it as 'Checkpoint' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="CheckPoint.cs" Line="9">Change 'CheckPoint.GetCheckPoint()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DataLoader" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#LoadPlayers(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Squads&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DataLoader.cs" Line="52">Change 'List&lt;Players&gt;' in 'DataLoader.LoadPlayers(List&lt;Squads&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DataLoader.cs" Line="52">Change 'List&lt;Squads&gt;' in 'DataLoader.LoadPlayers(List&lt;Squads&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadSquads(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DataLoader.cs" Line="42">Change 'List&lt;Squads&gt;' in 'DataLoader.LoadSquads(List&lt;Teams&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DataLoader.cs" Line="42">Change 'List&lt;Teams&gt;' in 'DataLoader.LoadSquads(List&lt;Teams&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LoadTeams()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DataLoader.cs" Line="21">Method 'DataLoader.LoadTeams()' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "Loading teams".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DataLoader.cs" Line="30">Method 'DataLoader.LoadTeams()' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "\nCould not connect to the database. Press enter to try again.".</Issue>
+            </Message>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DataLoader.cs" Line="27">Modify 'DataLoader.LoadTeams()' to catch a more specific exception than 'object' or rethrow the exception.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DataLoader.cs" Line="14">Change 'List&lt;Teams&gt;' in 'DataLoader.LoadTeams()' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DisplayAssistant" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DisplayBattingCard(Repositories.TableEntities.Teams,System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.Player&gt;,System.String,System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.Extra&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="220">Method 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "(, All out, ; ,  overs)".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="233">Method 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: ", ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="218">Method 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "Total".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="213">Method 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "\n, Extras".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="227">Method 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "\nDid not bat: ".</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="222">Method 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: " (,  runs per over)".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="208">Method 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: " Batting, R, B, 4s, 6s, SR, \n".</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="211">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="211">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="211">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="211">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="216">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="222">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="211">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="222">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBattingCard(Teams, List&lt;Player&gt;, string, List&lt;Extra&gt;)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DisplayBowlingCard(Repositories.TableEntities.Teams,System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.Player&gt;,System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.FallOfWicket&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="172">Method 'DisplayAssistant.DisplayBowlingCard(Teams, List&lt;Player&gt;, List&lt;FallOfWicket&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: " Bowling, O, M, D, R, W, Econ, \n".</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="175">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBowlingCard(Teams, List&lt;Player&gt;, List&lt;FallOfWicket&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="175">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBowlingCard(Teams, List&lt;Player&gt;, List&lt;FallOfWicket&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="175">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBowlingCard(Teams, List&lt;Player&gt;, List&lt;FallOfWicket&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="175">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBowlingCard(Teams, List&lt;Player&gt;, List&lt;FallOfWicket&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="175">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBowlingCard(Teams, List&lt;Player&gt;, List&lt;FallOfWicket&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="175">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBowlingCard(Teams, List&lt;Player&gt;, List&lt;FallOfWicket&gt;)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="175">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayBowlingCard(Teams, List&lt;Player&gt;, List&lt;FallOfWicket&gt;)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DisplayEndOfOver(Cricket_Simulator.Entities.Player,Cricket_Simulator.Entities.Player,Cricket_Simulator.Entities.Player,Cricket_Simulator.Entities.Player,System.String,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32[])" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="InCurrent" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="84">In member 'DisplayAssistant.DisplayEndOfOver(Player, Player, Player, Player, string, int, int, int, int, int, int, int[])', the compound word 'InCurrent' in parameter name 'ballsInCurrentOver' exists as a discrete term. If your usage is intended to be single word, case it as 'Incurrent' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="112">Method 'DisplayAssistant.DisplayEndOfOver(Player, Player, Player, Player, string, int, int, int, int, int, int, int[])' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "\n, Over ,  (, 0 runs, Maiden, , , ),  , /".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DisplayFallOfWickets(System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.FallOfWicket&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="189">Method 'DisplayAssistant.DisplayFallOfWickets(List&lt;FallOfWicket&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "\nFall of wickets\n".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DisplayPlayers(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Squads&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="48">Method 'DisplayAssistant.DisplayPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: " (, )".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="50">Method 'DisplayAssistant.DisplayPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: " (, )".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="70">Method 'DisplayAssistant.DisplayPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: ". ,  (vc),  (c)".</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="19">Change 'List&lt;Players&gt;' in 'DisplayAssistant.DisplayPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="19">Change 'List&lt;Squads&gt;' in 'DisplayAssistant.DisplayPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="19">Change 'List&lt;Teams&gt;' in 'DisplayAssistant.DisplayPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="vc" TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="70">Correct the spelling of the unrecognized token 'vc' in the literal '" (vc)"'.</Issue>
+            </Message>
+            <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="45">Because the behavior of 'string.ToUpper()' could vary based on the current user's locale settings, replace this call in 'DisplayAssistant.DisplayPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' with a call to 'string.ToUpper(CultureInfo)'. If the result of 'string.ToUpper(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DisplayScoreCard(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;,System.Int32,System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.Player&gt;,System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.Player&gt;,System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.Extra&gt;,System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.FallOfWicket&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="ScoreCard" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="149">The compound word 'ScoreCard' in member name 'DisplayAssistant.DisplayScoreCard(List&lt;Teams&gt;, int, List&lt;Player&gt;, List&lt;Player&gt;, List&lt;Extra&gt;, List&lt;FallOfWicket&gt;)' exists as a discrete term. If your usage is intended to be single word, case it as 'Scorecard' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="149">Change 'List&lt;Extra&gt;' in 'DisplayAssistant.DisplayScoreCard(List&lt;Teams&gt;, int, List&lt;Player&gt;, List&lt;Player&gt;, List&lt;Extra&gt;, List&lt;FallOfWicket&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="149">Change 'List&lt;FallOfWicket&gt;' in 'DisplayAssistant.DisplayScoreCard(List&lt;Teams&gt;, int, List&lt;Player&gt;, List&lt;Player&gt;, List&lt;Extra&gt;, List&lt;FallOfWicket&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="149">Change 'List&lt;Player&gt;' in 'DisplayAssistant.DisplayScoreCard(List&lt;Teams&gt;, int, List&lt;Player&gt;, List&lt;Player&gt;, List&lt;Extra&gt;, List&lt;FallOfWicket&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="149">Change 'List&lt;Player&gt;' in 'DisplayAssistant.DisplayScoreCard(List&lt;Teams&gt;, int, List&lt;Player&gt;, List&lt;Player&gt;, List&lt;Extra&gt;, List&lt;FallOfWicket&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="149">Change 'List&lt;Teams&gt;' in 'DisplayAssistant.DisplayScoreCard(List&lt;Teams&gt;, int, List&lt;Player&gt;, List&lt;Player&gt;, List&lt;Extra&gt;, List&lt;FallOfWicket&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="1-battingTeamIndex" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="DisplayAssistant.cs" Line="159">Correct the potential overflow in the operation '1-battingTeamIndex' in 'DisplayAssistant.DisplayScoreCard(List&lt;Teams&gt;, int, List&lt;Player&gt;, List&lt;Player&gt;, List&lt;Extra&gt;, List&lt;FallOfWicket&gt;)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FirstInnings" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#RandomBallResult(System.Int32[],Cricket_Simulator.Entities.Player,Cricket_Simulator.Entities.Player,System.Int32&amp;,System.Int32&amp;,Cricket_Simulator.Entities.BallResult&amp;,System.Int32&amp;,System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.Extra&gt;,System.Int32&amp;,System.Double,System.Boolean&amp;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="171">Method 'FirstInnings.RandomBallResult(int[], Player, Player, ref int, ref int, ref BallResult, ref int, List&lt;Extra&gt;, ref int, double, ref bool)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: " to ".</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="182">Method 'FirstInnings.RandomBallResult(int[], Player, Player, ref int, ref int, ref BallResult, ref int, List&lt;Extra&gt;, ref int, double, ref bool)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: ", Striker, , Non-striker".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="188">Method 'FirstInnings.RandomBallResult(int[], Player, Player, ref int, ref int, ref BallResult, ref int, List&lt;Extra&gt;, ref int, double, ref bool)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Free hit".</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="175">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'FirstInnings.RandomBallResult(int[], Player, Player, ref int, ref int, ref BallResult, ref int, List&lt;Extra&gt;, ref int, double, ref bool)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Start(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Squads&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;,System.Int32,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="checkPoint" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Name="MemberParameterShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="24">In member 'FirstInnings.Start(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;, int, int)', the compound word 'checkPoint' in parameter name 'checkPoint' exists as a discrete term. If your usage is intended to be single word, case it as 'checkpoint' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="24">Change 'List&lt;Players&gt;' in 'FirstInnings.Start(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;, int, int)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="24">Change 'List&lt;Squads&gt;' in 'FirstInnings.Start(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;, int, int)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="24">Change 'List&lt;Teams&gt;' in 'FirstInnings.Start(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;, int, int)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message Id="1-battingTeamIndex" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="38">Correct the potential overflow in the operation '1-battingTeamIndex' in 'FirstInnings.Start(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;, int, int)'.</Issue>
+            </Message>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="FirstInnings.cs" Line="39">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'FirstInnings.Start(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;, int, int)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Simulation" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Start()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="Simulation.cs" Line="24">Method 'Simulation.Start()' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "Loading players".</Issue>
+            </Message>
+            <Message Id="firstInningsScore" TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="Simulation.cs" Line="47">'Simulation.Start()' declares a variable, 'firstInningsScore', of type 'int', which is never used or is only assigned to. Use this variable or remove it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SimulationHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ChangeStrike(Cricket_Simulator.Entities.Player&amp;,Cricket_Simulator.Entities.Player&amp;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="SimulationHelper.cs" Line="51">Consider a design that does not require that 'batsmanStrike' be a reference parameter.</Issue>
+            </Message>
+            <Message Id="1#" TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="SimulationHelper.cs" Line="51">Consider a design that does not require that 'batsmanNonStrike' be a reference parameter.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetAggression(System.Collections.Generic.List`1&lt;Cricket_Simulator.Entities.Player&gt;,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="SimulationHelper.cs" Line="11">Change 'List&lt;Player&gt;' in 'SimulationHelper.GetAggression(List&lt;Player&gt;, int)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="TeamSelection" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ChangeViceCaptain(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Squads&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;,System.Int32)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="282">Method 'TeamSelection.ChangeViceCaptain(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;, int)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "Select a vice captain for , : ".</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="288">Method 'TeamSelection.ChangeViceCaptain(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;, int)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: " is already the captain. Please choose a different vice captain.\n".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsValidPlayingXI(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="322">Method 'TeamSelection.IsValidPlayingXI(List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Not a valid playing XI. Select at least 5 bowlers and a wicketkeeper. Try again....".</Issue>
+            </Message>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="307">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'TeamSelection.IsValidPlayingXI(List&lt;Players&gt;)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#PromptChangeLeader(System.String,System.Boolean)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="265">Method 'TeamSelection.PromptChangeLeader(string, bool)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "If you want to change , vice,  captain for , , then press Y: ".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RemoveDuplicatePlayers(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Squads&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="176">Method 'TeamSelection.RemoveDuplicatePlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "\nIf you want him to play for ,  in this game, then press Y: ".</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="174">Method 'TeamSelection.RemoveDuplicatePlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: " is present in both the teams.".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectLeaders(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Squads&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="237">Method 'TeamSelection.SelectLeaders(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "Select a captain for , : ".</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="216">Change 'List&lt;Players&gt;' in 'TeamSelection.SelectLeaders(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="216">Change 'List&lt;Squads&gt;' in 'TeamSelection.SelectLeaders(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="216">Change 'List&lt;Teams&gt;' in 'TeamSelection.SelectLeaders(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectPlayers(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Squads&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="73">Method 'TeamSelection.SelectPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "\nUnable to find at least eleven players to play for ".</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="62">Change 'List&lt;Players&gt;' in 'TeamSelection.SelectPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="62">Change 'List&lt;Squads&gt;' in 'TeamSelection.SelectPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="62">Change 'List&lt;Teams&gt;' in 'TeamSelection.SelectPlayers(List&lt;Teams&gt;, List&lt;Squads&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SelectTeams(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.Write(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="35">Method 'TeamSelection.SelectTeams(List&lt;Teams&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "Select second team to play: ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="28">Method 'TeamSelection.SelectTeams(List&lt;Teams&gt;)' passes a literal string as parameter 'value' of a call to 'Console.Write(string)'. Retrieve the following string(s) from a resource table instead: "\nSelect first team to play: ".</Issue>
+            </Message>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="24">Method 'TeamSelection.SelectTeams(List&lt;Teams&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: ". ".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="48">Method 'TeamSelection.SelectTeams(List&lt;Teams&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Unable to find at least two teams to play".</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="16">Change 'List&lt;Teams&gt;' in 'TeamSelection.SelectTeams(List&lt;Teams&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TrySelectXiByAddition(Repositories.TableEntities.Teams,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Squads&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="102">Method 'TeamSelection.TrySelectXiByAddition(Teams, List&lt;Squads&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "\nSelect the playing XI for ".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TrySelectXiByRemoval(Repositories.TableEntities.Teams,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Squads&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="TeamSelection.cs" Line="134">Method 'TeamSelection.TrySelectXiByRemoval(Teams, List&lt;Squads&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "\nRemove few players from squad to select playing XI for ".</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Toss" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetBattingTeamIndex(System.Collections.Generic.List`1&lt;Repositories.TableEntities.Teams&gt;,System.Collections.Generic.List`1&lt;Repositories.TableEntities.Players&gt;)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Console.WriteLine(System.String)" TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="DependsOnFix">
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="Toss.cs" Line="21">Method 'Toss.GetBattingTeamIndex(List&lt;Teams&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "Time for the toss\n".</Issue>
+             <Issue Name="KnownValue" Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="Toss.cs" Line="37">Method 'Toss.GetBattingTeamIndex(List&lt;Teams&gt;, List&lt;Players&gt;)' passes a literal string as parameter 'value' of a call to 'Console.WriteLine(string)'. Retrieve the following string(s) from a resource table instead: "\n,  has won the toss and elected to , bat, field,  first.".</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:56Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="Toss.cs" Line="15">Change 'List&lt;Players&gt;' in 'Toss.GetBattingTeamIndex(List&lt;Teams&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\Logic" File="Toss.cs" Line="15">Change 'List&lt;Teams&gt;' in 'Toss.GetBattingTeamIndex(List&lt;Teams&gt;, List&lt;Players&gt;)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+   <Name>Compound words should be cased correctly</Name>
+   <Description>Avoid creating compound words from terms which exist in the dictionary as discrete terms. Do not create a compound word such as 'StopWatch' or 'PopUp'. These terms are recognized in the dictionary and should be cased as 'Stopwatch' and 'Popup'.</Description>
+   <Resolution Name="MemberParameterShouldBeDiscreteTerm">In member {0}, the compound word '{1}' in parameter name {2} exists as a discrete term. If your usage is intended to be single word, case it as '{3}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="TypeShouldBeDiscreteTerm">The compound word '{0}' in type name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264474.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="80">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Do not pass literals as localized parameters" Category="Microsoft.Globalization" CheckId="CA1303">
+   <Name>Do not pass literals as localized parameters</Name>
+   <Description>Literal strings that are embedded in source code are difficult to localize. Avoid passing literal strings as arguments in circumstances where a localized string is generally expected.</Description>
+   <Resolution Name="KnownValue">Method {0} passes a literal string as parameter '{1}' of a call to {2}. Retrieve the following string(s) from a resource table instead: {3}.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182187.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182137.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotPassTypesByReference" Category="Microsoft.Design" CheckId="CA1045">
+   <Name>Do not pass types by reference</Name>
+   <Description>Although there are legitimate times to use reference parameters, such use frequently indicates a design that does not conform to the design guidelines for managed code.</Description>
+   <Resolution Name="Default">Consider a design that does not require that {0} be a reference parameter.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182146.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+   <Name>Identifiers should not contain underscores</Name>
+   <Description>Do not use underscores when specifying identifiers. Some generated Visual Studio identifiers for applications contain underscore characters. Underscore characters should generally be avoided in public identifiers.</Description>
+   <Resolution Name="Member">Remove the underscores from member name {0}.</Resolution>
+   <Resolution Name="Namespace">Remove the underscores from namespace name '{0}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182245.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Literals should be spelled correctly" Category="Microsoft.Naming" CheckId="CA2204">
+   <Name>Literals should be spelled correctly</Name>
+   <Description>This rule parses the literal string into words, tokenizing compound words, and checks the spelling of each word/token.</Description>
+   <Resolution Name="Default">Correct the spelling of the unrecognized token '{0}' in the literal '{1}'.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/bb264488.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233">
+   <Name>Operations should not overflow</Name>
+   <Description>Arithmetic operations should not be done without first validating the operands to prevent overflow.</Description>
+   <Resolution Name="Default">Correct the potential overflow in the operation '{0}' in {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182354.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="usagerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="RemoveUnusedLocals" Category="Microsoft.Performance" CheckId="CA1804">
+   <Name>Remove unused locals</Name>
+   <Description>Remove locals that are not used or are only assigned to in method implementations.</Description>
+   <Resolution Name="Default">{0} declares a variable, {1}, of type {2}, which is never used or is only assigned to. Use this variable or remove it.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182278.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+   <Name>Specify CultureInfo</Name>
+   <Description>If an overload exists that takes a CultureInfo argument, it should always be called in favor of an overload that does not. The CultureInfo type contains culture-specific information required for performing numeric and string operations, such as casing, formatting, and string comparisons. In scenarios where conversion and parsing behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182189.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182181.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

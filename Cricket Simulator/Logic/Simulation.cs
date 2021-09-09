@@ -1,6 +1,11 @@
-﻿using Cricket_Simulator.Common;
+﻿using System;
+using System.Linq;
+using Cricket_Simulator.Common;
 using Cricket_Simulator.Entities;
 using Cricket_Simulator.Enums;
+using static Cricket_Simulator.Configuration.Likelihoods;
+using static Cricket_Simulator.Logic.Utilities;
+using static Logging.Logger;
 
 namespace Cricket_Simulator.Logic
 {
@@ -17,181 +22,265 @@ namespace Cricket_Simulator.Logic
         /// <returns></returns>
         public static BallResult GetNext(BattingAttributes batsman, BowlingAttributes bowler, BallResult lastBallResult, double conditions = 1, double pitch = 1, double aggression = 1)
         {
+            LogEntry(inputParams: new object[] { batsman, bowler, lastBallResult, conditions, pitch, aggression });
+
+            if (bowler == null)
+                throw new ArgumentNullException(nameof(bowler));
+
+            if (batsman == null)
+                throw new ArgumentNullException(nameof(batsman));
+
             BallResult ballResult = new BallResult();
 
-            if (Utilities.GetRandomResultFromLikelihoods("Dead ball; Ball bowled", 1, 100) == 0)
-                if (lastBallResult.Wickets.WicketType != WicketType.None && Utilities.GetRandomResultFromLikelihoods("Timed out; Not out", 1, 1000) == 0)
+            if (GetRandomResultFromLikelihoods(DEADBALL_OR_NOT) == 0)
+                if (lastBallResult?.Wickets.WicketType != WicketType.None && GetRandomResultFromLikelihoods(TIMEDOUT_OR_NOT) == 0)
                 {
                     ballResult.DeadBall = DeadBallType.TimedOut;
-                    ballResult.Wickets.SetWicket(WicketType.TimedOut, false);
+                    ballResult.Wickets.SetWicket(WicketType.TimedOut);
                 }
                 else
                 {
-                    ballResult.DeadBall = (DeadBallType)(2 + Utilities.GetRandomResultFromLikelihoods("Refer dead ball types from 3rd", 1, 5, 5, 20, 50, 1000));
+                    ballResult.DeadBall = (DeadBallType)(GetRandomResultFromLikelihoods(DEADBALL_TYPE));
                     if (ballResult.DeadBall == DeadBallType.Mankaded)
+                    {
                         ballResult.Wickets.SetWicket(WicketType.Mankaded, true);
+                    }
                 }
             else
             {
-                switch (Utilities.GetRandomResultFromLikelihoods("Wide ball; No ball; Legitimate ball", 10, 1, 250))
+                switch (GetRandomResultFromLikelihoods(BALL_TYPE))
                 {
                     case 0:
-                        ballResult.Extras.ExtraType = ExtraType.Wide;
-                        ballResult.Extras.Runs = 1 + Utilities.GetRandomResultFromLikelihoods("Runs with wide: 0; 1; 2; 3; 4", 500, 50, 25, 10, 50);
+                        ballResult.Extras.Add(new Extra
+                        {
+                            ExtraType = ExtraType.Wide,
+                            Runs = GetRandomResultFromLikelihoods(WIDE_RUNS)
+                        });
 
-                        if (Utilities.GetRandomResultFromLikelihoods("Wicket on wide; No wicket on wide", 1, 150) == 0)
+                        bowler.Runs++;
+                        bowler.WideBalls++;
+
+                        if (ballResult.Extras.Last().Runs == 5)
+                        {
+                            bowler.Runs += 4;
+                            bowler.WideBalls += 4;
+                        }
+
+                        ballResult.StrikeChange = (ballResult.Extras.Last().Runs % 2 == 0);
+
+                        if (GetRandomResultFromLikelihoods(WIDE_WICKET_OR_NOT) == 0)
                         {
                             AddWicket(ballResult);
-                            if (ballResult.Wickets.WicketType.In(WicketType.Bowled, WicketType.LBW, WicketType.Caught, WicketType.CaughtBehind, WicketType.HitTwice, WicketType.HandledBall))
-                                ballResult.Wickets.WicketType = WicketType.None;
 
                             if (ballResult.Wickets.WicketType.In(WicketType.Stumped, WicketType.HitWicket))
-                                ballResult.Extras.Runs = 1;
+                            {
+                                ballResult.Extras.Last().Runs = 1;
+                                ballResult.StrikeChange = false;
+                            }
                         }
                         break;
                     case 1:
-                        ballResult.Extras.ExtraType = ExtraType.NoBall;
-                        ballResult.Extras.Runs = 1;
+                        ballResult.Extras.Add(new Extra
+                        {
+                            ExtraType = ExtraType.NoBall,
+                            Runs = 1
+                        });
+                        bowler.NoBalls++;
+                        bowler.Runs++;
                         AddBattingAction(ballResult, batsman, bowler, aggression, pitch, conditions);
+                        batsman.BallsFaced++;
+                        if (ballResult.Runs == 0)
+                            batsman.DotBalls++;
                         break;
                     case 2:
                         AddBattingAction(ballResult, batsman, bowler, aggression, pitch, conditions);
+                        batsman.BallsFaced++;
+                        bowler.Balls++;
+                        if (ballResult.Runs == 0)
+                        {
+                            batsman.DotBalls++;
+                            if (ballResult.Extras.Sum(item => item.Runs) == 0)
+                                bowler.DotBalls++;
+                        }
                         break;
                 }
             }
+
+            batsman.Runs += ballResult.Runs;
+
+            bowler.Runs += ballResult.Runs;
 
             ballResult.Notation = GetNotation(ballResult);
 
             ballResult.Commentary = Commentary.GetCommentary(ballResult);
 
+            LogExit(returnValue: ballResult);
             return ballResult;
         }
 
         private static void AddBattingAction(BallResult ballResult, BattingAttributes batsman, BowlingAttributes bowler, double aggression, double pitch, double conditions)
         {
-            //if (Utilities.GetRandomResultFromLikelihoods("Extras; Otherwise", 1, 25) == 0)
-            //    AddExtras(ballResult);
+            LogEntry(inputParams: new object[] { ballResult, batsman, bowler, aggression, pitch, conditions });
 
-            ////Assuming 1000 balls are bowled, calculating likelihood of events.
+            if (GetRandomResultFromLikelihoods(EXTRAS_OR_NOT) == 0)
+                AddExtras(ballResult);
 
-            //double runsByBatsman = batsman.StrikeRate * 10;
-            //double runsByBowler = bowler.CareerEconomy * (1000 / 6);
-            //double averageRuns = (runsByBatsman + runsByBowler) / 2;
-            //int runs = (int)(averageRuns * aggression * pitch * conditions);
+            //Assuming 1000 balls are bowled, calculating likelihood of events.
 
-            //double averageRunsPerWicket = (batsman.Average + bowler.CareerAverage) / 2;
-            //int wickets = (int)((runs / averageRunsPerWicket) * (aggression / (pitch * conditions)));
-            //int runs4 = (int)((runs * batsman.FourPercentage / 100) / 4);
-            //int runs6 = (int)((runs * batsman.SixPercentage / 100) / 6);
+            double runsByBatsman = batsman.StrikeRate * 10;
+            double runsByBowler = bowler.CareerEconomy * (1000 / 6);
+            double averageRuns = (runsByBatsman + runsByBowler) / 2;
+            int runs = (int)(averageRuns * aggression * pitch * conditions);
 
-            //int runsRemaining = runs - (runs4 * 4 + runs6 * 6);
+            double averageRunsPerWicket = (batsman.CareerAverage + bowler.CareerAverage) / 2;
+            int wickets = (int)((runs / averageRunsPerWicket) * (aggression / (pitch * conditions)));
+            int runs4 = (int)((runs * batsman.CareerFourPercentage / 100) / 4);
+            int runs6 = (int)((runs * batsman.CareerSixPercentage / 100) / 6);
 
-            //int runs1 = runsRemaining * 61 / 100;
-            //int runs2 = (runsRemaining * 30 / 100) / 2;
-            //int runs3 = (runsRemaining * 9 / 100) / 3;
-            //int dots = 1000 - wickets - runs1 - runs2 - runs3 - runs4 - runs6;
+            int runsRemaining = runs - (runs4 * 4 + runs6 * 6);
 
-            //switch (Utilities.GetRandomResultFromLikelihoods("Probability of a ball to have stated results", wickets, runs1, runs2, runs3, runs4, runs6, dots))
-            //{
-            //    case 0:
-            //        AddWicket(ballResult);
-            //        break;
-            //    case 1:
-            //        ballResult.Runs = 1;
-            //        break;
-            //    case 2:
-            //        ballResult.Runs = 2;
-            //        break;
-            //    case 3:
-            //        ballResult.Runs = 3;
-            //        break;
-            //    case 4:
-            //        ballResult.Runs = 4;
-            //        break;
-            //    case 5:
-            //        ballResult.Runs = 6;
-            //        break;
-            //}
+            int runs1 = runsRemaining * 61 / 100;
+            int runs2 = (runsRemaining * 30 / 100) / 2;
+            int runs3 = (runsRemaining * 9 / 100) / 3;
+            int dots = 1000 - wickets - runs1 - runs2 - runs3 - runs4 - runs6;
 
-            //if (ballResult.Extras.ExtraType.In(ExtraType.Bye, ExtraType.LegBye, ExtraType.Penalty))
-            //    ballResult.Runs = 0;
+            switch (GetRandomResultFromLikelihoods(wickets, runs1, runs2, runs3, runs4, runs6, dots))
+            {
+                case 0:
+                    AddWicket(ballResult);
+
+                    if (ballResult.Wickets.WicketType.In(WicketType.Bowled, WicketType.LBW, WicketType.Caught, WicketType.CaughtBehind, WicketType.Stumped, WicketType.HitWicket))
+                        bowler.Wickets++;
+
+                    break;
+                case 1:
+                    ballResult.Runs = 1;
+                    ballResult.StrikeChange = true;
+                    break;
+                case 2:
+                    ballResult.Runs = 2;
+                    break;
+                case 3:
+                    ballResult.Runs = 3;
+                    ballResult.StrikeChange = true;
+                    break;
+                case 4:
+                    ballResult.Runs = 4;
+                    batsman.Fours++;
+                    break;
+                case 5:
+                    ballResult.Runs = 6;
+                    batsman.Sixes++;
+                    break;
+                default:
+                    break;
+            }
+
+            if (ballResult.Extras.Exists(item => item.ExtraType.In(ExtraType.Bye, ExtraType.LegBye, ExtraType.Penalty)))
+                ballResult.Runs = 0;
+
+            LogExit();
         }
 
-        private static string GetNotation(BallResult ballResult)
+        public static string GetNotation(BallResult ballResult)
         {
+            LogEntry(inputParams: ballResult);
+
             string notation = string.Empty;
 
             if (ballResult.Runs > 0)
                 notation = ballResult.Runs.ToString();
 
-            if (ballResult.Extras.ExtraType != ExtraType.None)
+            foreach (Extra extra in ballResult.Extras)
             {
-                switch (ballResult.Extras.ExtraType)
+                switch (extra.ExtraType)
                 {
                     case ExtraType.Bye:
-                        notation += ballResult.Extras.Runs.ToString() + "b";
+                        notation += extra.Runs;
                         break;
                     case ExtraType.LegBye:
-                        notation += ballResult.Extras.Runs.ToString() + "lb";
+                        notation += extra.Runs;
                         break;
                     case ExtraType.Wide:
-                        if (ballResult.Extras.Runs > 1)
-                            notation += (ballResult.Extras.Runs - 1).ToString();
-                        notation += "wd";
-                        break;
-                    case ExtraType.NoBall:
-                        notation += "nb";
+                        if (extra.Runs > 1)
+                            notation += (extra.Runs - 1);
                         break;
                     case ExtraType.Penalty:
-                        if (notation != string.Empty)
+                        if (!string.IsNullOrEmpty(notation))
                             notation += "+";
-                        notation += ballResult.Extras.Runs.ToString() + "p";
+                        notation += extra.Runs;
                         break;
                 }
 
-                if (ballResult.Wickets.WicketType != WicketType.None)
+                notation += GetExtraTypeNotation(extra.ExtraType);
+
+                if (ballResult.Extras.IndexOf(extra) < ballResult.Extras.Count - 1)
                     notation += "+";
             }
 
             if (ballResult.Wickets.WicketType != WicketType.None)
-                notation += "W";
+            {
+                if (ballResult.Extras.Count > 0)
+                    notation += "+";
 
-            if (notation == string.Empty && ballResult.DeadBall == DeadBallType.None)
+                notation += "W";
+            }
+
+            if (string.IsNullOrEmpty(notation) && ballResult.DeadBall == DeadBallType.None)
                 notation = "0";
 
+            LogExit(returnValue: notation);
             return notation;
         }
 
         private static void AddExtras(BallResult ballResult)
         {
-            switch (Utilities.GetRandomResultFromLikelihoods("Leg bye; Bye; Penalty", 400, 100, 1))
+            LogEntry(inputParams: ballResult);
+
+            switch (GetRandomResultFromLikelihoods(LEGAL_BALL_EXTRAS_TYPE))
             {
                 case 0:
-                    ballResult.Extras.ExtraType = ExtraType.LegBye;
-                    ballResult.Extras.Runs = 1 + Utilities.GetRandomResultFromLikelihoods("Runs with leg bye: 1; 2; 3; 4", 500, 25, 10, 50);
+                    ballResult.Extras.Add(new Extra
+                    {
+                        ExtraType = ExtraType.LegBye,
+                        Runs = GetRandomResultFromLikelihoods(LEGBYE_RUNS)
+                    });
+
+                    ballResult.StrikeChange = (ballResult.Extras.Last().Runs % 2 == 1);
                     break;
                 case 1:
-                    ballResult.Extras.ExtraType = ExtraType.Bye;
-                    ballResult.Extras.Runs = 1 + Utilities.GetRandomResultFromLikelihoods("Runs with byes: 1; 2; 3; 4", 500, 25, 10, 50);
+                    ballResult.Extras.Add(new Extra
+                    {
+                        ExtraType = ExtraType.Bye,
+                        Runs = GetRandomResultFromLikelihoods(BYE_RUNS)
+                    });
+
+                    ballResult.StrikeChange = (ballResult.Extras.Last().Runs % 2 == 1);
                     break;
                 case 2:
-                    ballResult.Extras.ExtraType = ExtraType.Penalty;
-                    ballResult.Extras.Runs = 5;
+                    ballResult.Extras.Add(new Extra
+                    {
+                        ExtraType = ExtraType.Penalty,
+                        Runs = 5
+                    });
+
                     break;
             }
+
+            LogExit();
         }
 
         private static void AddWicket(BallResult ballResult)
         {
+            LogEntry(inputParams: ballResult);
+
             ballResult.Wickets.SetWicket();
 
-            if (ballResult.Extras.ExtraType == ExtraType.None)
-            {
-                if (ballResult.Wickets.WicketType.In(WicketType.Runout, WicketType.ObstructedField))
-                    ballResult.Runs = Utilities.GetRandomResultFromLikelihoods("Runouts while taking runs: 1st; 2nd; 3rd; 4th", 60, 30, 9, 1);
-            }
-            else
-                switch (ballResult.Extras.ExtraType)
+            if (ballResult.Wickets.WicketType.In(WicketType.Runout, WicketType.ObstructedField))
+                ballResult.Runs = GetRandomResultFromLikelihoods(RUNOUT_RUNS);
+
+            if (ballResult.Extras.Count > 0)
+                switch (ballResult.Extras.First().ExtraType)
                 {
                     case ExtraType.NoBall:
                         if (ballResult.Wickets.WicketType.In(WicketType.Bowled, WicketType.LBW, WicketType.Caught, WicketType.CaughtBehind, WicketType.Stumped, WicketType.HitWicket))
@@ -202,10 +291,16 @@ namespace Cricket_Simulator.Logic
                             ballResult.Wickets.WicketType = WicketType.None;
                         break;
                     default:
-                        if (ballResult.Wickets.WicketType.In(WicketType.Caught, WicketType.Bowled, WicketType.CaughtBehind, WicketType.HandledBall, WicketType.HitTwice, WicketType.LBW, WicketType.LBW, WicketType.Mankaded, WicketType.Stumped))
+                        if (ballResult.Wickets.WicketType.In(WicketType.Caught, WicketType.Bowled, WicketType.CaughtBehind, WicketType.HandledBall, WicketType.HitTwice, WicketType.LBW, WicketType.Mankaded, WicketType.Stumped))
                             ballResult.Wickets.WicketType = WicketType.None;
                         break;
                 }
+
+            if (ballResult.Wickets.WicketType == WicketType.Caught || ballResult.Wickets.WicketType == WicketType.ObstructedField || ballResult.Wickets.WicketType == WicketType.Runout)
+                if (GetRandomResultFromLikelihoods(HEADS_OR_TAILS) == 0)
+                    ballResult.StrikeChange = true;
+
+            LogExit();
         }
     }
 }

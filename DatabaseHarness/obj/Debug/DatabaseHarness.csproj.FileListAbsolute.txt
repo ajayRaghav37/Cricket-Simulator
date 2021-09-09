@@ -1,0 +1,24 @@
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\DatabaseHarness.exe.config
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\DatabaseHarness.exe
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\DatabaseHarness.pdb
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Microsoft.WindowsAzure.Mobile.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Newtonsoft.Json.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Repositories.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\System.Net.Http.Extensions.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\System.Net.Http.Primitives.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Cricket Simulator.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Repositories.pdb
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.xml
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Newtonsoft.Json.xml
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\System.Net.Http.Extensions.xml
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\System.Net.Http.Primitives.xml
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\bin\Debug\Cricket Simulator.pdb
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\obj\Debug\DatabaseHarness.csproj.App.config
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\obj\Debug\DatabaseHarness.csprojResolveAssemblyReference.cache
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\obj\Debug\DatabaseHarness.InsertPlayers.resources
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\obj\Debug\DatabaseHarness.Properties.Resources.resources
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\obj\Debug\DatabaseHarness.csproj.GenerateResource.Cache
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\obj\Debug\DatabaseHarness.exe
+D:\Documents\User Data\Desktop\Cricket Simulator\DatabaseHarness\obj\Debug\DatabaseHarness.pdb

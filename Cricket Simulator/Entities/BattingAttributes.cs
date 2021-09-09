@@ -1,4 +1,6 @@
-﻿namespace Cricket_Simulator.Entities
+﻿using static Logging.Logger;
+
+namespace Cricket_Simulator.Entities
 {
     public class BattingAttributes
     {
@@ -8,11 +10,15 @@
         public int DotBalls { get; set; }
         public int Fours { get; set; }
         public int Sixes { get; set; }
+        public string Status { get; set; }
         public double StrikeRate
         {
             get
             {
-                return Runs * 100 / BallsFaced;
+                if (BallsFaced == 0)
+                    return 0;
+
+                return (double)Runs * 100 / BallsFaced;
             }
         }
         public double Aggression
@@ -20,6 +26,22 @@
             get
             {
                 return 1;
+            }
+        }
+
+        public string Display
+        {
+            get
+            {
+                string display = Runs + "* (" + BallsFaced + "b";
+
+                if (Fours > 0)
+                    display += " " + Fours + "x4";
+
+                if (Sixes > 0)
+                    display += " " + Sixes + "x6";
+
+                return display + ")";
             }
         }
 
@@ -31,25 +53,37 @@
 
         private void InitializeMembers()
         {
+            LogEntry();
+
             Runs = 0;
             BallsFaced = 0;
             DotBalls = 0;
             Fours = 0;
             Sixes = 0;
+
+            LogExit();
         }
 
         public BattingAttributes()
         {
+            LogEntry();
+
             InitializeMembers();
+
+            LogExit();
         }
 
         public BattingAttributes(double careerStrikeRate, double careerAverage, double careerFourPercentage, double careerSixPercentage)
         {
+            LogEntry(inputParams: new object[] { careerStrikeRate, careerAverage, careerFourPercentage, careerSixPercentage });
+
             InitializeMembers();
             CareerStrikeRate = careerStrikeRate;
             CareerAverage = careerAverage;
             CareerFourPercentage = careerFourPercentage;
             CareerSixPercentage = careerSixPercentage;
+
+            LogExit();
         }
     }
 }

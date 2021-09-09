@@ -1,0 +1,32 @@
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.Console.exe.config
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.Console.exe
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.Console.pdb
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.pdb
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator.Console\obj\Debug\Cricket Simulator.Console.csprojResolveAssemblyReference.cache
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator.Console\obj\Debug\Cricket Simulator.Console.exe
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator.Console\obj\Debug\Cricket Simulator.Console.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.Console.exe.config
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.Console.exe
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.Console.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.Console.exe.CodeAnalysisLog.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.Console.exe.lastcodeanalysissucceeded
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Logging.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Microsoft.WindowsAzure.Mobile.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Newtonsoft.Json.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Repositories.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\System.Net.Http.Extensions.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\System.Net.Http.Primitives.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Cricket Simulator.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Logging.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Repositories.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Microsoft.WindowsAzure.Mobile.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Microsoft.WindowsAzure.Mobile.Ext.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\Newtonsoft.Json.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\System.Net.Http.Extensions.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Debug\System.Net.Http.Primitives.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\obj\Debug\Cricket Simulator.Console.csprojResolveAssemblyReference.cache
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\obj\Debug\Cricket Simulator.Console.exe
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\obj\Debug\Cricket Simulator.Console.pdb

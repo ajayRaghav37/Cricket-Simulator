@@ -1,0 +1,5 @@
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Logging\bin\Debug\Logging.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Logging\bin\Debug\Logging.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Logging\obj\Debug\Logging.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Logging\obj\Debug\Logging.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Logging\obj\Debug\Logging.csprojResolveAssemblyReference.cache

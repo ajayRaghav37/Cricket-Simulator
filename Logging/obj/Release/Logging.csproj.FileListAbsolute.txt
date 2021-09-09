@@ -1,0 +1,4 @@
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Logging\bin\Release\Logging.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Logging\bin\Release\Logging.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Logging\obj\Release\Logging.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Logging\obj\Release\Logging.pdb

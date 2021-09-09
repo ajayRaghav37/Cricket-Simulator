@@ -9,7 +9,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cricket Simulator.Console",
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Peripherals", "Peripherals", "{21FDAE24-6AC9-4E96-89A5-29E72606602A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureInjection", "AzureInjection\AzureInjection.csproj", "{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repositories", "Repositories\Repositories.csproj", "{FE24026D-BD26-40F3-8321-DA8AA0F628E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseHarness", "DatabaseHarness\DatabaseHarness.csproj", "{7E8ED6E3-620A-493A-AC57-39D5460FFE99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logging", "Logging\Logging.csproj", "{76D2EDFA-F35C-4E08-A62C-31D666217947}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,19 +29,29 @@ Global
 		{7587355F-01BC-47EB-A875-D59167B4E1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7587355F-01BC-47EB-A875-D59167B4E1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7587355F-01BC-47EB-A875-D59167B4E1F1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE24026D-BD26-40F3-8321-DA8AA0F628E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE24026D-BD26-40F3-8321-DA8AA0F628E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE24026D-BD26-40F3-8321-DA8AA0F628E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE24026D-BD26-40F3-8321-DA8AA0F628E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E8ED6E3-620A-493A-AC57-39D5460FFE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E8ED6E3-620A-493A-AC57-39D5460FFE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E8ED6E3-620A-493A-AC57-39D5460FFE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E8ED6E3-620A-493A-AC57-39D5460FFE99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D2EDFA-F35C-4E08-A62C-31D666217947}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D2EDFA-F35C-4E08-A62C-31D666217947}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D2EDFA-F35C-4E08-A62C-31D666217947}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D2EDFA-F35C-4E08-A62C-31D666217947}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC} = {21FDAE24-6AC9-4E96-89A5-29E72606602A}
+		{FE24026D-BD26-40F3-8321-DA8AA0F628E2} = {21FDAE24-6AC9-4E96-89A5-29E72606602A}
+		{7E8ED6E3-620A-493A-AC57-39D5460FFE99} = {21FDAE24-6AC9-4E96-89A5-29E72606602A}
+		{76D2EDFA-F35C-4E08-A62C-31D666217947} = {21FDAE24-6AC9-4E96-89A5-29E72606602A}
 	EndGlobalSection
 	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
+		SccNumberOfProjects = 6
 		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
 		SccTeamFoundationServer = https://anicodotin.visualstudio.com/defaultcollection
 		SccLocalPath0 = .
@@ -47,9 +61,17 @@ Global
 		SccProjectUniqueName2 = Cricket\u0020Simulator\\Cricket\u0020Simulator.csproj
 		SccProjectName2 = Cricket\u0020Simulator
 		SccLocalPath2 = Cricket\u0020Simulator
-		SccProjectUniqueName3 = AzureInjection\\AzureInjection.csproj
+		SccProjectUniqueName3 = Repositories\\Repositories.csproj
 		SccProjectTopLevelParentUniqueName3 = Cricket\u0020Simulator.sln
-		SccProjectName3 = AzureInjection
-		SccLocalPath3 = AzureInjection
+		SccProjectName3 = Repositories
+		SccLocalPath3 = Repositories
+		SccProjectUniqueName4 = DatabaseHarness\\DatabaseHarness.csproj
+		SccProjectTopLevelParentUniqueName4 = Cricket\u0020Simulator.sln
+		SccProjectName4 = DatabaseHarness
+		SccLocalPath4 = DatabaseHarness
+		SccProjectUniqueName5 = Logging\\Logging.csproj
+		SccProjectTopLevelParentUniqueName5 = Cricket\u0020Simulator.sln
+		SccProjectName5 = Logging
+		SccLocalPath5 = Logging
 	EndGlobalSection
 EndGlobal

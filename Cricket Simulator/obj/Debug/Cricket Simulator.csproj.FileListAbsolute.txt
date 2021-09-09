@@ -1,0 +1,14 @@
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator\bin\Debug\Cricket Simulator.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator\bin\Debug\Cricket Simulator.pdb
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator\obj\Debug\Cricket Simulator.csprojResolveAssemblyReference.cache
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator\obj\Debug\Cricket Simulator.dll
+D:\Documents\User Data\Desktop\Cricket Simulator\Cricket Simulator\obj\Debug\Cricket Simulator.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Debug\Cricket Simulator.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Debug\Cricket Simulator.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Debug\Cricket Simulator.dll.CodeAnalysisLog.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Debug\Cricket Simulator.dll.lastcodeanalysissucceeded
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Debug\Logging.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Debug\Logging.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\obj\Debug\Cricket Simulator.csprojResolveAssemblyReference.cache
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\obj\Debug\Cricket Simulator.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\obj\Debug\Cricket Simulator.pdb

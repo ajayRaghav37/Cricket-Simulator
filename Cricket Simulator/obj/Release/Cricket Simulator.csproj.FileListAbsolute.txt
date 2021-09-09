@@ -1,0 +1,7 @@
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Release\Cricket Simulator.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Release\Cricket Simulator.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Release\Logging.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Release\Logging.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\obj\Release\Cricket Simulator.csprojResolveAssemblyReference.cache
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\obj\Release\Cricket Simulator.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\obj\Release\Cricket Simulator.pdb

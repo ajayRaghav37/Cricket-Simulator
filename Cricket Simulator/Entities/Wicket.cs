@@ -1,26 +1,36 @@
 ﻿using Cricket_Simulator.Enums;
-using Cricket_Simulator.Logic;
+using static Cricket_Simulator.Configuration.Likelihoods;
+using static Cricket_Simulator.Logic.Utilities;
+using static Logging.Logger;
 
 namespace Cricket_Simulator.Entities
 {
     public class Wicket
     {
         public WicketType WicketType { get; set; }
-        public bool StrikeChange { get; set; }
+        public bool IsNonStriker { get; set; }
 
         public void SetWicket()
         {
-            WicketType = (WicketType)Utilities.GetRandomResultFromLikelihoods("Refer wicket types enum", 0, 0, 0, 1, 100, 100, 200, 500, 20000, 50000, 200000, 200000, 250000, 1000000);
+            LogEntry();
 
-            if (WicketType == WicketType.Caught || WicketType == WicketType.ObstructedField || WicketType == WicketType.Runout)
-                if (Utilities.GetRandomResultFromLikelihoods("Equally likely", 1, 1) == 0)
-                    StrikeChange = true;
+            WicketType = (WicketType)GetRandomResultFromLikelihoods(WICKET_TYPE);
+
+            if (WicketType == WicketType.ObstructedField || WicketType == WicketType.Runout)
+                if (GetRandomResultFromLikelihoods(HEADS_OR_TAILS) == 0)
+                    IsNonStriker = true;
+
+            LogExit();
         }
 
-        public void SetWicket(WicketType wicketType, bool strikeChange = false)
+        public void SetWicket(WicketType wicketType, bool isNonStriker = false)
         {
+            LogEntry(inputParams: new object[] { wicketType, isNonStriker });
+
             WicketType = wicketType;
-            StrikeChange = strikeChange;
+            IsNonStriker = isNonStriker;
+
+            LogExit();
         }
     }
 }

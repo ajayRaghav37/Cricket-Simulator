@@ -1,0 +1,686 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="14.0">
+ <Namespaces>
+  <Namespace Name="Cricket_Simulator.Common">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Cricket_Simulator.Common' with another namespace.</Issue>
+    </Message>
+    <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="95" Level="Error">Remove the underscores from namespace name 'Cricket_Simulator.Common'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Cricket_Simulator.Configuration">
+   <Messages>
+    <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="95" Level="Error">Remove the underscores from namespace name 'Cricket_Simulator.Configuration'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Cricket_Simulator.Entities">
+   <Messages>
+    <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="95" Level="Error">Remove the underscores from namespace name 'Cricket_Simulator.Entities'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Cricket_Simulator.Enums">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Cricket_Simulator.Enums' with another namespace.</Issue>
+    </Message>
+    <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="95" Level="Error">Remove the underscores from namespace name 'Cricket_Simulator.Enums'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+  <Namespace Name="Cricket_Simulator.Logic">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">Consider merging the types defined in 'Cricket_Simulator.Logic' with another namespace.</Issue>
+    </Message>
+    <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+     <Issue Name="Namespace" Certainty="95" Level="Error">Remove the underscores from namespace name 'Cricket_Simulator.Logic'.</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\bin\Debug\Cricket Simulator.dll">
+   <Modules>
+    <Module Name="cricket simulator.dll">
+     <Messages>
+      <Message TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="NonBreaking">
+       <Issue Name="NoStrongName" Certainty="95" Level="CriticalError">Sign 'Cricket Simulator.dll' with a strong name key.</Issue>
+      </Message>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'Cricket Simulator.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="Cricket_Simulator.Common">
+       <Types>
+        <Type Name="Extensions" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#PadCenter(System.String,System.Int32)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="str" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="MemberParameter" Certainty="75" Level="CriticalWarning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Common" File="Extensions.cs" Line="45">In method 'Extensions.PadCenter(this string, int)', correct the spelling of 'str' in parameter name 'str' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Cricket_Simulator.Configuration">
+       <Types>
+        <Type Name="Likelihoods" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BALL_TYPE" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.BALL_TYPE' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="BALL" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'BALL' in member name 'Likelihoods.BALL_TYPE' by changing it to 'Ball'.</Issue>
+            </Message>
+            <Message Id="TYPE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'TYPE' in member name 'Likelihoods.BALL_TYPE' by changing it to 'Type'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.BALL_TYPE'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#BYE_RUNS" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.BYE_RUNS' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="BYE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'BYE' in member name 'Likelihoods.BYE_RUNS' by changing it to 'Bye'.</Issue>
+            </Message>
+            <Message Id="RUNS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'RUNS' in member name 'Likelihoods.BYE_RUNS' by changing it to 'Runs'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.BYE_RUNS'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CAUGHT_BY_BOWLER_OR_NOT" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.CAUGHT_BY_BOWLER_OR_NOT' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="BOWLER" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'BOWLER' in member name 'Likelihoods.CAUGHT_BY_BOWLER_OR_NOT' by changing it to 'Bowler'.</Issue>
+            </Message>
+            <Message Id="CAUGHT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'CAUGHT' in member name 'Likelihoods.CAUGHT_BY_BOWLER_OR_NOT' by changing it to 'Caught'.</Issue>
+            </Message>
+            <Message Id="NOT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'NOT' in member name 'Likelihoods.CAUGHT_BY_BOWLER_OR_NOT' by changing it to 'Not'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.CAUGHT_BY_BOWLER_OR_NOT'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DEADBALL_OR_NOT" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.DEADBALL_OR_NOT' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="DEADBALL" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'DEADBALL' in member name 'Likelihoods.DEADBALL_OR_NOT' by changing it to 'Deadball'.</Issue>
+            </Message>
+            <Message Id="NOT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'NOT' in member name 'Likelihoods.DEADBALL_OR_NOT' by changing it to 'Not'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.DEADBALL_OR_NOT'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DEADBALL_TYPE" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.DEADBALL_TYPE' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="DEADBALL" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'DEADBALL' in member name 'Likelihoods.DEADBALL_TYPE' by changing it to 'Deadball'.</Issue>
+            </Message>
+            <Message Id="TYPE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'TYPE' in member name 'Likelihoods.DEADBALL_TYPE' by changing it to 'Type'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.DEADBALL_TYPE'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EXTRAS_OR_NOT" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.EXTRAS_OR_NOT' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="EXTRAS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'EXTRAS' in member name 'Likelihoods.EXTRAS_OR_NOT' by changing it to 'Extras'.</Issue>
+            </Message>
+            <Message Id="NOT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'NOT' in member name 'Likelihoods.EXTRAS_OR_NOT' by changing it to 'Not'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.EXTRAS_OR_NOT'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#HEADS_OR_TAILS" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.HEADS_OR_TAILS' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="HEADS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'HEADS' in member name 'Likelihoods.HEADS_OR_TAILS' by changing it to 'Heads'.</Issue>
+            </Message>
+            <Message Id="TAILS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'TAILS' in member name 'Likelihoods.HEADS_OR_TAILS' by changing it to 'Tails'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.HEADS_OR_TAILS'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LEGAL_BALL_EXTRAS_TYPE" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.LEGAL_BALL_EXTRAS_TYPE' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="BALL" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'BALL' in member name 'Likelihoods.LEGAL_BALL_EXTRAS_TYPE' by changing it to 'Ball'.</Issue>
+            </Message>
+            <Message Id="EXTRAS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'EXTRAS' in member name 'Likelihoods.LEGAL_BALL_EXTRAS_TYPE' by changing it to 'Extras'.</Issue>
+            </Message>
+            <Message Id="LEGAL" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'LEGAL' in member name 'Likelihoods.LEGAL_BALL_EXTRAS_TYPE' by changing it to 'Legal'.</Issue>
+            </Message>
+            <Message Id="TYPE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'TYPE' in member name 'Likelihoods.LEGAL_BALL_EXTRAS_TYPE' by changing it to 'Type'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.LEGAL_BALL_EXTRAS_TYPE'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LEGBYE_RUNS" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.LEGBYE_RUNS' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="LEGBYE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'LEGBYE' in member name 'Likelihoods.LEGBYE_RUNS' by changing it to 'Legbye'.</Issue>
+            </Message>
+            <Message Id="RUNS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'RUNS' in member name 'Likelihoods.LEGBYE_RUNS' by changing it to 'Runs'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.LEGBYE_RUNS'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RUNOUT_RUNS" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.RUNOUT_RUNS' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="RUNOUT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'RUNOUT' in member name 'Likelihoods.RUNOUT_RUNS' by changing it to 'Runout'.</Issue>
+            </Message>
+            <Message Id="RUNS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'RUNS' in member name 'Likelihoods.RUNOUT_RUNS' by changing it to 'Runs'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.RUNOUT_RUNS'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RUNOUT_TYPE" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.RUNOUT_TYPE' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="RUNOUT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'RUNOUT' in member name 'Likelihoods.RUNOUT_TYPE' by changing it to 'Runout'.</Issue>
+            </Message>
+            <Message Id="TYPE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'TYPE' in member name 'Likelihoods.RUNOUT_TYPE' by changing it to 'Type'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.RUNOUT_TYPE'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#TIMEDOUT_OR_NOT" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.TIMEDOUT_OR_NOT' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="NOT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'NOT' in member name 'Likelihoods.TIMEDOUT_OR_NOT' by changing it to 'Not'.</Issue>
+            </Message>
+            <Message Id="TIMEDOUT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'TIMEDOUT' in member name 'Likelihoods.TIMEDOUT_OR_NOT' by changing it to 'Timedout'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.TIMEDOUT_OR_NOT'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WICKET_TYPE" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.WICKET_TYPE' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="TYPE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'TYPE' in member name 'Likelihoods.WICKET_TYPE' by changing it to 'Type'.</Issue>
+            </Message>
+            <Message Id="WICKET" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'WICKET' in member name 'Likelihoods.WICKET_TYPE' by changing it to 'Wicket'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.WICKET_TYPE'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WIDE_RUNS" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.WIDE_RUNS' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="RUNS" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'RUNS' in member name 'Likelihoods.WIDE_RUNS' by changing it to 'Runs'.</Issue>
+            </Message>
+            <Message Id="WIDE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'WIDE' in member name 'Likelihoods.WIDE_RUNS' by changing it to 'Wide'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.WIDE_RUNS'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WIDE_WICKET_OR_NOT" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="CriticalWarning">Either replace 'Likelihoods.WIDE_WICKET_OR_NOT' with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Issue>
+            </Message>
+            <Message Id="NOT" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'NOT' in member name 'Likelihoods.WIDE_WICKET_OR_NOT' by changing it to 'Not'.</Issue>
+            </Message>
+            <Message Id="WICKET" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'WICKET' in member name 'Likelihoods.WIDE_WICKET_OR_NOT' by changing it to 'Wicket'.</Issue>
+            </Message>
+            <Message Id="WIDE" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'WIDE' in member name 'Likelihoods.WIDE_WICKET_OR_NOT' by changing it to 'Wide'.</Issue>
+            </Message>
+            <Message TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="95" Level="Error">Remove the underscores from member name 'Likelihoods.WIDE_WICKET_OR_NOT'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Cricket_Simulator.Entities">
+       <Types>
+        <Type Name="BallResult" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Extras" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Entities" File="BallResult.cs" Line="12">Change 'List&lt;Extra&gt;' in 'BallResult.Extras' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="BattingAttributes" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Aggression" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Entities" File="BattingAttributes.cs" Line="27">The 'this' parameter (or 'Me' in Visual Basic) of 'BattingAttributes.Aggression' is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Player" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#NickName" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="NickName" TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="MemberShouldBeDiscreteTerm" Certainty="80" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Entities" File="Player.cs" Line="8">The compound word 'NickName' in member name 'Player.NickName' exists as a discrete term. If your usage is intended to be single word, case it as 'Nickname' or strip the first token entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Role" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#RoleDesc" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Desc" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Entities" File="Role.cs" Line="6">Correct the spelling of 'Desc' in member name 'Role.RoleDesc' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Team" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#FlagUri" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Flag" TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="MemberNoAlternate" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Entities" File="Team.cs" Line="14">Replace the term 'Flag' in member name 'Team.FlagUri' with an appropriate alternate or remove it entirely.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Wicket" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#SetWicket(Cricket_Simulator.Enums.WicketType,System.Boolean)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Entities" File="Wicket.cs" Line="27">Replace method 'Wicket.SetWicket(WicketType, bool)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Cricket_Simulator.Enums">
+       <Types>
+        <Type Name="DeadBallType" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Mankaded" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Mankaded" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Mankaded' in member name 'DeadBallType.Mankaded' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FieldingPosition" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="NonBreaking">
+           <Issue Name="NotFlagsNoZeroValue" Certainty="95" Level="CriticalError">Add a member to 'FieldingPosition' that has a value of zero with a suggested name of 'None'.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="WicketType" Kind="Enum" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#LBW" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="LBW" TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="85" Level="Error">Correct the casing of 'LBW' in member name 'WicketType.LBW' by changing it to 'Lbw'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Mankaded" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Mankaded" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Mankaded' in member name 'WicketType.Mankaded' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Runout" Kind="Field" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="Runout" TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Name="Member" Certainty="75" Level="CriticalWarning">Correct the spelling of 'Runout' in member name 'WicketType.Runout' or remove it entirely if it represents any sort of Hungarian notation.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="Cricket_Simulator.Logic">
+       <Types>
+        <Type Name="Simulation" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetNext(Cricket_Simulator.Entities.BattingAttributes,Cricket_Simulator.Entities.BowlingAttributes,Cricket_Simulator.Entities.BallResult,System.Double,System.Double,System.Double)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Logic" File="Simulation.cs" Line="24">Replace method 'Simulation.GetNext(BattingAttributes, BowlingAttributes, BallResult, double, double, double)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetNotation(Cricket_Simulator.Entities.BallResult)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Logic" File="Simulation.cs" Line="192">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Simulation.GetNotation(BallResult)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="0" TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Logic" File="Simulation.cs" Line="191">In externally visible method 'Simulation.GetNotation(BallResult)', validate parameter 'ballResult' before using it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="Utilities" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetBallsNumber(System.String)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Double.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternate" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Logic" File="Utilities.cs" Line="117">Because the behavior of 'double.Parse(string)' could vary based on the current user's locale settings, replace this call in 'Utilities.GetBallsNumber(string)' with a call to 'double.Parse(string, IFormatProvider)'. If the result of 'double.Parse(string, IFormatProvider)' will be based on input from the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetOversString(System.Int32,System.Boolean)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Logic" File="Utilities.cs" Line="51">Replace method 'Utilities.GetOversString(int, bool)' with an overload that supplies all default arguments.</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2015-10-23 13:43:48Z" FixCategory="NonBreaking">
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Logic" File="Utilities.cs" Line="57">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Utilities.GetOversString(int, bool)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Name="IFormatProviderAlternateString" Certainty="95" Level="Error" Path="D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator\Logic" File="Utilities.cs" Line="69">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'Utilities.GetOversString(int, bool)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="ArrayFieldsShouldNotBeReadOnly" Category="Microsoft.Security" CheckId="CA2105">
+   <Name>Array fields should not be read only</Name>
+   <Description>Read-only fields that reference arrays might not give the intended effect. Setting a field which references an array to read-only prevents the value of the field from being changed. Note that elements in the array can be changed. You can ignore this violation if protecting the contents of the array is not a concern.</Description>
+   <Resolution Name="Default">Either replace {0} with a strongly typed collection that cannot be changed, or replace the public field with a method that returns a clone of a private array.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182299.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">CriticalWarning</MessageLevel>
+   <File Name="securityrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="AssembliesShouldHaveValidStrongNames" Category="Microsoft.Design" CheckId="CA2210">
+   <Name>Assemblies should have valid strong names</Name>
+   <Description>Either the assembly has no strong name, an invalid one, or the strong name is valid only because of the computer configuration. The assembly should not be deployed in this state. The most common causes of this are: 1) The assembly's contents were modified after it was signed. 2) The signing process failed. 3) The assembly was delay-signed. 4) A registry key existed that allowed the check to pass (where it would not have otherwise).</Description>
+   <Resolution Name="NoStrongName">Sign {0} with a strong name key.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182127.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+   <Name>Avoid namespaces with few types</Name>
+   <Description>A namespace should generally have more than five types.</Description>
+   <Resolution Name="Default">Consider merging the types defined in '{0}' with another namespace.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182130.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="CompoundWordsShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1702">
+   <Name>Compound words should be cased correctly</Name>
+   <Description>Avoid creating compound words from terms which exist in the dictionary as discrete terms. Do not create a compound word such as 'StopWatch' or 'PopUp'. These terms are recognized in the dictionary and should be cased as 'Stopwatch' and 'Popup'.</Description>
+   <Resolution Name="MemberShouldBeDiscreteTerm">The compound word '{0}' in member name {1} exists as a discrete term. If your usage is intended to be single word, case it as '{2}' or strip the first token entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264474.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="80">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DefaultParametersShouldNotBeUsed" Category="Microsoft.Design" CheckId="CA1026">
+   <Name>Default parameters should not be used</Name>
+   <Description>Some programming languages do not support default parameters. Replace default parameters with method overloads that supply the default argument.</Description>
+   <Resolution Name="Default">Replace method {0} with an overload that supplies all default arguments.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182135.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182142.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="EnumsShouldHaveZeroValue" Category="Microsoft.Design" CheckId="CA1008">
+   <Name>Enums should have zero value</Name>
+   <Description>An enum should generally have a zero value. If the enum is not decorated with the Flags attribute, it should have a member with a value of zero that represents the empty state. Optionally, this value is named 'None'. For a Flags-attributed enum, a zero-valued member is optional and, if it exists, should always be named 'None'. This value should indicate that no values have been set in the enum. Using a zero-valued member for other purposes is contrary to the use of the Flags attribute in that the bitwise AND and OR operators are useless with the member.</Description>
+   <Resolution Name="NotFlagsNoZeroValue">Add a member to {0} that has a value of zero with a suggested name of 'None'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182149.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeCasedCorrectly" Category="Microsoft.Naming" CheckId="CA1709">
+   <Name>Identifiers should be cased correctly</Name>
+   <Description>Type, namespace, and member identifiers are Pascal-cased. Parameter identifiers are camel-cased. Two letter acronyms within these identifiers should be upper-cased, for example, use System.IO instead of System.Io. Acronyms of three or more letters should be Pascal-cased, for example, use System.Xml instead of System.XML. The pascal-casing convention capitalizes the first letter of each word, as in BackColor. The camel-casing convention formats the first letter of the first word in lowercase and capitalizes the first letter of all subsequent words, as in backgroundColor. Although it may be common practice for some two letter acronyms to not be fully capitalized, violations of this rule should not be excluded for this reason. For example, 'DbConnection', is common but incorrect; use DBConnection. A violation of this rule might be required for compatibility with existing, non-managed symbol schemes. In general, however, these symbols should not be visible outside the assembly that uses them.</Description>
+   <Resolution Name="Member">Correct the casing of '{0}' in member name {1} by changing it to '{2}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182240.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="85">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldBeSpelledCorrectly" Category="Microsoft.Naming" CheckId="CA1704">
+   <Name>Identifiers should be spelled correctly</Name>
+   <Description>The individual words that make up an identifier should not be abbreviated and should be spelled correctly. If this rule generates a false positive on a term that should be recognized, add the word to the FxCop custom dictionary.</Description>
+   <Resolution Name="Member">Correct the spelling of '{0}' in member name {1} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Resolution Name="MemberParameter">In method {0}, correct the spelling of '{1}' in parameter name {2} or remove it entirely if it represents any sort of Hungarian notation.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb264492.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainUnderscores" Category="Microsoft.Naming" CheckId="CA1707">
+   <Name>Identifiers should not contain underscores</Name>
+   <Description>Do not use underscores when specifying identifiers. Some generated Visual Studio identifiers for applications contain underscore characters. Underscore characters should generally be avoided in public identifiers.</Description>
+   <Resolution Name="Member">Remove the underscores from member name {0}.</Resolution>
+   <Resolution Name="Namespace">Remove the underscores from namespace name '{0}'.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182245.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182156.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="designrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkMembersAsStatic" Category="Microsoft.Performance" CheckId="CA1822">
+   <Name>Mark members as static</Name>
+   <Description>Methods which do not access instance data or call instance methods can be marked as static (Shared in Visual Basic). After doing so, the compiler will emit non-virtual call sites to these members which will prevent a check at runtime for each call that ensures the current object pointer is non-null. This can result in a measurable performance gain for performance-sensitive code. In some cases, the failure to access the current object instance represents a correctness issue.</Description>
+   <Resolution Name="Default">The 'this' parameter (or 'Me' in Visual Basic) of {0} is never used. Mark the member as static (or Shared in Visual Basic) or use 'this'/'Me' in the method body or at least one property accessor, if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms245046.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="IFormatProviderAlternate">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be based on input from the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will based on input stored and accessed by software, such as when it is loaded from disk or from a database, specify {4}.</Resolution>
+   <Resolution Name="IFormatProviderAlternateString">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify {3} as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify {4}.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182190.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePreferredTerms" Category="Microsoft.Naming" CheckId="CA1726">
+   <Name>Use preferred terms</Name>
+   <Description>Use preferred terms over deprecated alternates.</Description>
+   <Resolution Name="MemberNoAlternate">Replace the term '{0}' in member name {1} with an appropriate alternate or remove it entirely.</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182258.aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="14.0.0.0" />
+  </Rule>
+  <Rule TypeName="Validate arguments of public methods" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>Validate arguments of public methods</Name>
+   <Description>All reference arguments passed to externally visible methods should be checked against null (Nothing in VB). If appropriate, throw a System.ArgumentNullException when the argument is null.</Description>
+   <Resolution Name="Default">In externally visible method {0}, validate parameter '{1}' before using it.</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182.aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="14.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+</FxCopReport>

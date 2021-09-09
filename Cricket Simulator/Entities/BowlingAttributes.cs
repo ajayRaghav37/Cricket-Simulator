@@ -1,4 +1,6 @@
 ﻿using System;
+using static Cricket_Simulator.Logic.Utilities;
+using static Logging.Logger;
 
 namespace Cricket_Simulator.Entities
 {
@@ -18,7 +20,7 @@ namespace Cricket_Simulator.Entities
             set
             {
                 balls = value;
-                overs = Cricket_Simulator.Logic.Utilities.GetOversString(value);
+                overs = GetOversString(value);
             }
         }
         public string Overs
@@ -32,11 +34,13 @@ namespace Cricket_Simulator.Entities
         public int DotBalls { get; set; }
         public int Runs { get; set; }
         public int Wickets { get; set; }
+        public int NoBalls { get; set; }
+        public int WideBalls { get; set; }
         public double Economy
         {
             get
             {
-                return Runs * 6 / (double)Balls;
+                return GetRunRate(Runs, Balls);
             }
         }
         public double Aggression
@@ -55,16 +59,17 @@ namespace Cricket_Simulator.Entities
                         aggression = Math.Pow(strikingFactor, 0.5);
                     else
                         aggression = 2 - Math.Pow(2 - strikingFactor, 0.5);
-
-                    //double economyDiff = (8 - Economy) / 8;
-
-                    //if (Math.Abs(economyDiff) >= 1)
-                    //    aggression += Math.Sign(economyDiff) * Math.Pow(Math.Abs(economyDiff), 0.1) / 4;
-                    //else
-                    //    aggression += Math.Sign(economyDiff) * Math.Pow(Math.Abs(economyDiff), 2) / 4;
                 }
 
                 return aggression;
+            }
+        }
+
+        public string Display
+        {
+            get
+            {
+                return Overs + "-" + Maidens + "-" + DotBalls + "-" + Runs + "-" + Wickets;
             }
         }
 
@@ -75,30 +80,42 @@ namespace Cricket_Simulator.Entities
         {
             get
             {
-                return (CareerAverage * 6 / CareerEconomy);
+                return GetRunRate(CareerAverage, CareerEconomy);
             }
         }
 
         private void InitializeMembers()
         {
+            LogEntry();
+
             balls = 0;
             Runs = 0;
             overs = "0";
             Wickets = 0;
             Maidens = 0;
             DotBalls = 0;
+
+            LogExit();
         }
 
         public BowlingAttributes()
         {
+            LogEntry();
+
             InitializeMembers();
+
+            LogExit();
         }
 
         public BowlingAttributes(double careerEconomy, double careerAverage)
         {
+            LogEntry(inputParams: new object[] { careerEconomy, careerAverage });
+
             InitializeMembers();
             CareerAverage = careerAverage;
             CareerEconomy = careerEconomy;
+
+            LogExit();
         }
     }
 }

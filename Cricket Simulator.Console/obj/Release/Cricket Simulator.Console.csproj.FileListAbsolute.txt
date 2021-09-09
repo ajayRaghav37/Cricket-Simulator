@@ -1,0 +1,22 @@
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Cricket Simulator.Console.exe.config
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Cricket Simulator.Console.exe
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Cricket Simulator.Console.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Cricket Simulator.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Logging.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Microsoft.WindowsAzure.Mobile.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Microsoft.WindowsAzure.Mobile.Ext.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Newtonsoft.Json.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Repositories.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\System.Net.Http.Extensions.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\System.Net.Http.Primitives.dll
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Cricket Simulator.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Logging.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Repositories.pdb
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Microsoft.WindowsAzure.Mobile.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Microsoft.WindowsAzure.Mobile.Ext.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\Newtonsoft.Json.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\System.Net.Http.Extensions.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\bin\Release\System.Net.Http.Primitives.xml
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\obj\Release\Cricket Simulator.Console.csprojResolveAssemblyReference.cache
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\obj\Release\Cricket Simulator.Console.exe
+D:\Corporate\ANIco.in\Team Foundation Server\Cricket Simulator\Cricket Simulator.Console\obj\Release\Cricket Simulator.Console.pdb

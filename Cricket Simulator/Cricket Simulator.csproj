@@ -24,6 +24,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -36,6 +38,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -44,9 +47,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\Extensions.cs" />
+    <Compile Include="Configuration\Likelihoods.cs" />
     <Compile Include="Entities\BallResult.cs" />
     <Compile Include="Entities\BattingAttributes.cs" />
     <Compile Include="Entities\BowlingAttributes.cs" />
+    <Compile Include="Entities\FallOfWicket.cs" />
+    <Compile Include="Entities\Role.cs" />
+    <Compile Include="Entities\Squad.cs" />
+    <Compile Include="Entities\Team.cs" />
     <Compile Include="Entities\Extra.cs" />
     <Compile Include="Entities\FieldingAttributes.cs" />
     <Compile Include="Entities\Player.cs" />
@@ -59,6 +67,12 @@
     <Compile Include="Logic\Simulation.cs" />
     <Compile Include="Logic\Utilities.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logging\Logging.csproj">
+      <Project>{76d2edfa-f35c-4e08-a62c-31d666217947}</Project>
+      <Name>Logging</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

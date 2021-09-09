@@ -2,10 +2,9 @@
 {
     public enum ExtraType
     {
-        None,
+        NoBall,
         Wide,
         LegBye,
-        NoBall,
         Bye,
         Penalty
     }
