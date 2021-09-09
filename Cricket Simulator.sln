@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cricket Simulator", "Cricket Simulator\Cricket Simulator.csproj", "{DE64EE7B-F43B-4A8E-AA74-27657430F305}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cricket Simulator.Console", "Cricket Simulator.Console\Cricket Simulator.Console.csproj", "{7587355F-01BC-47EB-A875-D59167B4E1F1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Peripherals", "Peripherals", "{21FDAE24-6AC9-4E96-89A5-29E72606602A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureInjection", "AzureInjection\AzureInjection.csproj", "{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DE64EE7B-F43B-4A8E-AA74-27657430F305}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE64EE7B-F43B-4A8E-AA74-27657430F305}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE64EE7B-F43B-4A8E-AA74-27657430F305}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE64EE7B-F43B-4A8E-AA74-27657430F305}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7587355F-01BC-47EB-A875-D59167B4E1F1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7587355F-01BC-47EB-A875-D59167B4E1F1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7587355F-01BC-47EB-A875-D59167B4E1F1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7587355F-01BC-47EB-A875-D59167B4E1F1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4A34F503-F31A-48C8-BCFE-F1464D9D92BC} = {21FDAE24-6AC9-4E96-89A5-29E72606602A}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://anicodotin.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Cricket\u0020Simulator.Console\\Cricket\u0020Simulator.Console.csproj
+		SccProjectName1 = Cricket\u0020Simulator.Console
+		SccLocalPath1 = Cricket\u0020Simulator.Console
+		SccProjectUniqueName2 = Cricket\u0020Simulator\\Cricket\u0020Simulator.csproj
+		SccProjectName2 = Cricket\u0020Simulator
+		SccLocalPath2 = Cricket\u0020Simulator
+		SccProjectUniqueName3 = AzureInjection\\AzureInjection.csproj
+		SccProjectTopLevelParentUniqueName3 = Cricket\u0020Simulator.sln
+		SccProjectName3 = AzureInjection
+		SccLocalPath3 = AzureInjection
+	EndGlobalSection
+EndGlobal
